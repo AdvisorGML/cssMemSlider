@@ -4,7 +4,8 @@ body {
   height: 100vh;
   align-items: center;
   justify-content: center;
-  background: url(../img/noise_transparent.png), radial-gradient(100% 215.42% at 0% 0%, #7e7e7e 0%, #292929 100%), linear-gradient(0deg, #1c1c1c, #1c1c1c);
+  background: url(../img/noise_transparent.png), radial-gradient(100% 215.42% at 0% 0%, #7e7e7e 0%, #292929 100%),
+    linear-gradient(0deg, #1c1c1c, #1c1c1c);
 }
 
 .container {
@@ -22,26 +23,14 @@ body {
   grid-template-rows: 3fr auto;
   grid-template-columns: 3fr 1fr;
   grid-template-areas:
-    'content content'
-    'text-area control';
+    "content content"
+    "text-area control";
   row-gap: 1rem;
   transition: 1s;
 }
 
-@media (max-width: 480px) {
-  .slider {
-    grid-template-rows: 3fr 5% 10%;
-    grid-template-columns: 1fr;
-    grid-gap: 1rem;
-    grid-template-areas:
-      'content'
-      'control'
-      'text-area';
-  }
-}
-
 input {
-  display: none;
+  visibility: hidden;
 }
 
 .slider-content,
@@ -80,33 +69,27 @@ input {
 }
 
 .slides .sl-1 {
-  background-image: url('../img/1.jpeg');
+  background-image: url("../img/1.jpeg");
 }
 
 .slides .sl-2 {
-  background-image: url('../img/2.jpeg');
+  background-image: url("../img/2.jpeg");
 }
 
 .slides .sl-3 {
-  background-image: url('../img/3.png');
+  background-image: url("../img/3.png");
 }
 
 .slides .sl-4 {
-  background-image: url('../img/4.png');
+  background-image: url("../img/4.png");
 }
 
 .slides .sl-5 {
-  background-image: url('../img/5.png');
+  background-image: url("../img/5.png");
 }
 
 .slider-text {
   grid-area: text-area;
-}
-
-@media (max-width: 480px) {
-  .slider-text {
-    font-size: 1.1rem;
-  }
 }
 
 .text .slide {
@@ -116,23 +99,10 @@ input {
   margin: 0;
 }
 
-@media (max-width: 480px) {
-  .text .slide {
-    text-align: center;
-    padding: 0;
-  }
-}
-
 .control {
   display: flex;
   justify-content: end;
   grid-area: control;
-}
-
-@media (max-width: 480px) {
-  .control {
-    justify-content: center;
-  }
 }
 
 .control label {
@@ -141,15 +111,9 @@ input {
   justify-content: center;
   padding: 0 0.7rem 2rem 0.7rem;
   cursor: pointer;
-  content: '';
+  content: "";
   width: 0.2rem;
   height: 0.2rem;
-}
-
-@media (max-width: 480px) {
-  .control label {
-    margin-right: 0.2rem;
-  }
 }
 
 .control label span {
@@ -208,6 +172,33 @@ input {
 }
 
 @media (max-width: 480px) {
+  .slider {
+    grid-template-rows: 3fr 5% 10%;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    grid-template-areas:
+      "content"
+      "control"
+      "text-area";
+  }
+
+  .slider-text {
+    font-size: 1.1rem;
+  }
+
+  .text .slide {
+    text-align: center;
+    padding: 0;
+  }
+
+  .control {
+    justify-content: center;
+  }
+  
+  .control label {
+    margin-right: 0.2rem;
+  }
+
   .text .slide {
     text-align: center;
     padding: 0;

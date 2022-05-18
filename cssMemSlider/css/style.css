@@ -186,7 +186,7 @@ input {
   }
 
   .text .slide {
-    text-align: center;
+    text-align: left;
     padding: 0;
   }
 
@@ -196,10 +196,5 @@ input {
   
   .control label {
     margin-right: 0.2rem;
-  }
-
-  .text .slide {
-    text-align: center;
-    padding: 0;
   }
 }
